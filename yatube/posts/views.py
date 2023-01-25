@@ -40,12 +40,9 @@ def profile(request, username):
     author = get_object_or_404(User, username=username)
     post_list = author.posts.all()
     page_obj = paginations(request, post_list)
-    following = False
-    if request.user.is_authenticated and request.user != author:
-        if Follow.objects.filter(user=request.user, author=author).exists():
-            following = "can_unfollow"
-        else:
-            following = "can_follow"
+    following = request.user.is_authenticated
+    if following:
+        following = author.following.filter(user=request.user).exists()
     template = "posts/profile.html"
     context = {
         "page_obj": page_obj,
