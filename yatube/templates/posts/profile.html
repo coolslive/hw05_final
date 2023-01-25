@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
-{% block title %}Все посты пользователя {{ page_obj.paginator.count }}{% endblock %}
+{% block title %}Все посты пользователя {{ author.get_full_name }}{% endblock %}
 
 {% block content %}
-  <h1>Все посты пользователя {{ page_obj.paginator.count }}</h1>
+  <h1>Все посты пользователя {{ author.get_full_name }}</h1>
   <h3>Всего постов: {{ author.posts.count }}</h3>
   {% if request.user != author %}
     {% if following %}

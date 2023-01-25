@@ -44,10 +44,12 @@ def profile(request, username):
     if following:
         following = author.following.filter(user=request.user).exists()
     template = "posts/profile.html"
+    posts_count = Post.objects.filter(author=author).count()
     context = {
         "page_obj": page_obj,
         "author": author,
         "following": following,
+        "posts_count": posts_count,
     }
 
     return render(request, template, context)
