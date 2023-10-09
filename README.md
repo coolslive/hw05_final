@@ -1,24 +1,25 @@
-ФИНАЛЬНЫЙ ПРОЭКТ 5 спринта.
 
-Социальная сеть с возможностью публикации постов, изображений, системой подписок на авторов, добавления в избранное, комментариев пользователей.
+### Социальная сеть(финальный проект 5 спринт)
 
-Стек:
+
+### Описание:
+- Социальная сеть с возможностью публикации постов, изображений.
+- Система подписок на авторов, добавления в избранное.
+- Комментарии пользователей.
+
+
+### Технологии:
 
 - Python 3.10.5
 - Django==2.2.28
 
-### Настройка и запуск на ПК
+
+### Установка:
 
 Клонируем проект:
 
 ```bash
 git clone https://github.com/themasterid/hw05_final.git
-```
-
-или
-
-```bash
-git clone git@github.com:themasterid/hw05_final.git
 ```
 
 Устанавливаем виртуальное окружение:
@@ -61,7 +62,6 @@ python yatube/manage.py createsuperuser
 python yatube/manage.py runserver localhost:80
 ```
 
-Проект будет доступен по адресу http://localhost/
-Заходим в http://localhost/admin и создаем группы и записи.
 
-[![CI](https://github.com/yandex-praktikum/hw05_final/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/yandex-praktikum/hw05_final/actions/workflows/python-app.yml)
+### Автор:
+Вячеслав Эрлих
